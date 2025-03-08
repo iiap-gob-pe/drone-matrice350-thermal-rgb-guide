@@ -12,21 +12,20 @@ Este repositorio ofrece una guía detallada sobre el uso del dron DJI Matrice 35
    - [En la zona de estudio](docs/04-listas-de-verificacion/en-zona-de-estudio.md)
 5. [Procedimientos durante el vuelo](docs/05-durante-el-vuelo.md)
 6. [Procedimientos después del vuelo](docs/06-despues-del-vuelo.md)
-7. [Procesamiento de imágenes térmicas](docs/07-procesamiento-de-imágenes-termicas.md) 
-8. [Generación de mosaicos con Agisoft Metashape](docs/08-generacion-de-mosaicos.md)
-9. [Conclusiones y recomendaciones](docs/09-conclusiones.md)
-10. Anexos
+7. [Organización de archivos](docs/07-organizacion_archivos.md)
+8. [Procesamiento de imágenes térmicas](docs/07-procesamiento-de-imágenes-termicas.md) 
+9. [Generación de mosaicos con Agisoft Metashape](docs/08-generacion-de-mosaicos.md)
+10. [Conclusiones y recomendaciones](docs/09-conclusiones.md)
+11. Anexos
     - [Recursos adicionales](docs/10-anexos/recursos-adicionales.md)
     - [Glosario de términos](docs/10-anexos/glosario.md)
     - [Plantillas y formatos](docs/10-anexos/plantillas.md)
 
 ## Autores
 
-- **Rodolfo Cardenas Vigo**, Instituto de Investigaciones de la Amazonia Peruana - Programa BOSQUES - Laboratorio de Procesamiento de Inteligencia Artificial
+- **Rodolfo Cardenas Vigo**, Instituto de Investigaciones de la Amazonia Peruana - Programa BOSQUES - Laboratorio de Procesamiento Imagenes e Inteligencia Artificial
 - **María**, Instituto de Investigaciones de la Amazonia Peruana - Programa BOSQUES - Laboratorio de Teledetección 
 - **Leon Bendayan Acosta**, Instituto de Investigaciones de la Amazonia Peruana - Programa BOSQUES - Laboratorio de Teledetección 
-
-*Nota:* :contentReference[oaicite:16]{index=16}&#8203;:contentReference[oaicite:17]{index=17}
 
 ## Cómo citar este manual
 

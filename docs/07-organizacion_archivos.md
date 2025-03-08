@@ -3,23 +3,23 @@ Para gestionar eficazmente las imágenes capturadas durante los vuelos con el **
 
 ## Estructura de Carpetas Generada por el Matrice 350 RTK
 
-El **Matrice 350 RTK** crea una carpeta distinta para cada vuelo realizado. Estas carpetas se nombran automáticamente siguiendo un formato que incluye la fecha, hora y una descripción del vuelo. Por ejemplo: `DJI_202502251021_004_VARILLAL01`. Este esquema de nomenclatura ayuda a identificar rápidamente cada misión.
+El **Matrice 350 RTK** crea una carpeta distinta para cada vuelo realizado. Estas carpetas se nombran automáticamente siguiendo un formato que incluye la fecha, hora y una descripción del vuelo. Por ejemplo: `DJI_202502251021_004_VARILLAL01`. Este esquema de nomenclatura ayuda a identificar rápidamente cada misión.
 
-Es importante destacar que, durante una misión, pueden generarse múltiples carpetas debido a pausas manuales o cambios de batería. Cada interrupción en el vuelo provoca la creación de una nueva carpeta al reanudar la operación. Por lo tanto, una sola misión puede estar distribuida en varias carpetas, cada una correspondiente a un segmento del vuelo.
+Es importante destacar que, durante una misión, pueden generarse múltiples carpetas debido a pausas manuales o cambios de batería. Cada interrupción en el vuelo provoca la creación de una nueva carpeta al reanudar la operación. Por lo tanto, una sola misión puede estar distribuida en varias carpetas, cada una correspondiente a un segmento del vuelo.
 
 ## Organización de Archivos por Zona de Estudio y Planes de Vuelo
 
 Para mantener una estructura coherente y facilitar el acceso a las imágenes, se recomienda el siguiente esquema de organización:
 
-1. **Carpeta Principal de la Zona de Estudio**: Crear una carpeta que represente la zona de estudio, por ejemplo, `ZonaDeEstudio_Nombre`.
+1. **Carpeta Principal de la Zona de Estudio**: Crear una carpeta que represente la zona de estudio, por ejemplo, `ZonaDeEstudio_Nombre`.
 
-2. **Subcarpetas para Planes de Vuelo**: Dentro de la carpeta de la zona de estudio, crear subcarpetas para cada plan de vuelo, nombradas de manera descriptiva, como `PlanDeVuelo_Fecha_Lugar`.
+2. **Subcarpetas para Planes de Vuelo**: Dentro de la carpeta de la zona de estudio, crear subcarpetas para cada plan de vuelo, nombradas de manera descriptiva, como `PlanDeVuelo_Fecha_Lugar`.
 
-3. **Integración de Carpetas Generadas por el Dron**: Dentro de cada carpeta de plan de vuelo, copiar las carpetas generadas por el Matrice 350 RTK durante ese plan. Estas carpetas suelen tener nombres como `DJI_202502251021_004_VARILLAL01`.
+3. **Integración de Carpetas Generadas por el Dron**: Dentro de cada carpeta de plan de vuelo, copiar las carpetas generadas por el Matrice 350 RTK durante ese plan. Estas carpetas suelen tener nombres como `DJI_202502251021_004_VARILLAL01`.
 
-4. **Subcarpetas para Tipos de Imágenes**: Dentro de cada carpeta generada por el dron, crear dos subcarpetas:
-   - `camara_t`: Para almacenar las imágenes térmicas.
-   - `camara_w`: Para almacenar las imágenes RGB.
+4. **Subcarpetas para Tipos de Imágenes**: Dentro de cada carpeta generada por el dron, crear dos subcarpetas:
+   - `camara_t`: Para almacenar las imágenes térmicas.
+   - `camara_w`: Para almacenar las imágenes RGB.
 
 
 ## Script de PowerShell para Automatizar la Organización
@@ -91,27 +91,35 @@ foreach ($plan in $planesDeVuelo) {
 **Instrucciones para Ejecutar el Script:**
 
 1. **Guardar el Script:**
-   - Copia el script proporcionado y pégalo en un editor de texto.
-   - Guarda el archivo con una extensión `.ps1`, por ejemplo, `OrganizarImagenes.ps1`.
+   - Copia el script proporcionado y pégalo en un editor de texto.
+   - Guarda el archivo con una extensión `.ps1`, por ejemplo, `OrganizarImagenes.ps1`.
 
 2. **Abrir PowerShell:**
-   - Presiona `Win + X` y selecciona "Windows PowerShell" o "Windows PowerShell (Administrador)" si se requieren permisos elevados.
+   - Presiona `Win + X` y selecciona "Windows PowerShell" o "Windows PowerShell (Administrador)" si se requieren permisos elevados.
 
 3. **Navegar hasta la Ubicación del Script:**
-   - Utiliza el comando `cd` para cambiar al directorio donde se encuentra el script.
+   - Utiliza el comando `cd` para cambiar al directorio donde se encuentra el script.
 
 4. **Ejecutar el Script con el Parámetro de Ruta:**
-   - Ejecuta el script proporcionando la ruta de la zona de estudio como parámetro:
+   - Ejecuta el script proporcionando la ruta de la zona de estudio como parámetro:
      ```powershell
      .\OrganizarImagenes.ps1 -zonaDeEstudioPath "C:\Ruta\A\ZonaDeEstudio"
      ```
 
 **Consideraciones Importantes:**
 
-- **Espacios en la Ruta:** Si la ruta de la zona de estudio contiene espacios, asegúrate de encerrarla entre comillas dobles al pasarla como parámetro.
+- **Espacios en la Ruta:** Si la ruta de la zona de estudio contiene espacios, asegúrate de encerrarla entre comillas dobles al pasarla como parámetro.
 
-- **Permisos de Ejecución:** Es posible que debas cambiar la política de ejecución de PowerShell para permitir la ejecución de scripts no firmados. Puedes hacerlo ejecutando `Set-ExecutionPolicy RemoteSigned` en PowerShell con permisos de administrador.
+- **Permisos de Ejecución:** Es posible que debas cambiar la política de ejecución de PowerShell para permitir la ejecución de scripts no firmados. Puedes hacerlo ejecutando `Set-ExecutionPolicy RemoteSigned` en PowerShell con permisos de administrador.
 
-- **Respaldo de Datos:** Antes de ejecutar el script, asegúrate de tener una copia de seguridad de tus imágenes para evitar pérdidas accidentales de datos.
+- **Respaldo de Datos:** Antes de ejecutar el script, asegúrate de tener una copia de seguridad de tus imágenes para evitar pérdidas accidentales de datos.
 
-Implementar el parámetro `$zonaDeEstudioPath` en el script permite una mayor flexibilidad al especificar la ruta de la zona de estudio durante la ejecución, facilitando su uso en diferentes entornos y proyectos. 
+Implementar el parámetro `$zonaDeEstudioPath` en el script permite una mayor flexibilidad al especificar la ruta de la zona de estudio durante la ejecución, facilitando su uso en diferentes entornos y proyectos.
+
+---
+
+| [⬅️ Tema anterior: Procedimientos después del vuelo](docs/06-despues-del-vuelo.md) | [Siguiente tema: Procesamiento de imágenes térmicas ➡️](docs/07-procesamiento-de-imágenes-termicas.md) |
+|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+
+
+
